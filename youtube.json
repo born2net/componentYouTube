@@ -1,0 +1,8 @@
+{
+  "name": "youtube",
+  "version": "1.0.485",
+  "url": "http://signage.me/components/youtube/youtube.zip",
+  "property": "page.html",
+  "desktopUseNode": true,
+  "debug": false
+}

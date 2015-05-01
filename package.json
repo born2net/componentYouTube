@@ -1,0 +1,14 @@
+{
+  "main": "index.html",
+  "name": "digg",
+  "single-instance": false,
+  "window": {
+    "toolbar": true,
+    "frame": true,
+    "x": 400,
+    "y": 400,
+    "width": 1200,
+    "height": 900
+  }
+}
+
