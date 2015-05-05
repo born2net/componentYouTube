@@ -1,7 +1,7 @@
-DigitalSignage: YouTUbe HTML5 Component
+DigitalSignage: YouTube Component
 ===
 
-open source digital signage HTML SDK
+open source HTML5 digital signage component
 ---
 
 experimental version - not for production use
