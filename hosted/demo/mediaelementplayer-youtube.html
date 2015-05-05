@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="../build/jquery.js"></script>
+	<script src="../build/mediaelement-and-player.js"></script>
+    <link rel="stylesheet" href="../build/mediaelementplayer.min.css" />
+</head>
+<body>
+
+<style>
+
+    html, body, video, div {
+        height: 100% !important;
+        width: 100% !important;
+        overflow: hidden;
+    }
+    .mejs-overlay-button {display:none;}
+
+    .mejs-container .mejs-controls {
+        display: none !important;
+    }
+
+</style>
+
+<!--
+<p id="videoID">video id: xxx</p>
+<p id="ended">loop: 1</p>
+<p id="pluginInfo"></p>
+-->
+
+<video autoplay height="100%" width="100%" style="width: 100%; height: 100%" id="player1">
+    <source type="video/youtube" src="http://www.youtube.com/watch?v=IGQBtbKSVhY" />
+    <!-- <source type="video/youtube"  /> -->
+</video>
+<span id="player1-mode"></span>
+<script>
+
+var loop = 1;
+
+window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
+    alert("Error occured: " + errorMsg);
+    return false;
+};
+
+$('video').mediaelementplayer({
+      features: [],
+      loop: true,
+      startVolume: 0.0,
+      success: function(media, node, player) {
+          //$('#pluginInfo').text('plugin: ' + node.id + '-mode' +  media.pluginType);
+
+          // tried to invoke an auto start in Android, no luck, video plays black
+          setTimeout(function(){
+              // $('.mejs-overlay-button').trigger('click');
+              media.setSrc('https://www.youtube.com/watch?v=IGQBtbKSVhY');
+              media.load();
+              media.play();
+              // $('video').load();
+              // $('video').attr('autoplay', 'true');
+
+          },3000);
+
+          // var videoID = 'BQ4yd2W50No';
+          videoID = location.search.split('id=')[1];
+          //$('#videoID').text('Video id: ' + videoID);
+          media.setSrc('https://www.youtube.com/watch?v=' + videoID);
+          media.load();
+          media.play();
+
+          /*
+           if (media.pluginType == 'flash') {
+                  media.addEventListener('canplay', function () {
+                   media.play();
+              }, false);
+           }
+           */
+
+          media.addEventListener('ended', function (e) {
+               //$('#ended').text('loop: ' + ++loop);
+          }, false);
+	}
+});
+
+</script>
+
+</body>
+</html>
