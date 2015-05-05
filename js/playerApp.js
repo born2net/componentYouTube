@@ -56,7 +56,10 @@ define(['Consts', 'backbone.controller', 'ComBroker', 'Lib', 'Elements'], functi
 
             var refresh = $.isNumeric(i_jData._refresh) ? i_jData._refresh : 60;
             refresh = refresh * 60000;
-            var urls = i_jData._urls.split(',');
+            // todo: debug
+            //var urls = i_jData._urls.split(',');
+            var urls = ['http://www.digitalsignage.com/tmp/youtube2/demo/mediaelementplayer-youtube.html?id=J6lyURyVz7k'];
+
 
             function goToURL(i_url) {
                 $iFrame.attr('src', i_url);
@@ -110,7 +113,6 @@ define(['Consts', 'backbone.controller', 'ComBroker', 'Lib', 'Elements'], functi
          **/
         _listenPlayerError: function () {
             var self = this;
-            log('123')
             BB.comBroker.listen(BB.EVENTS.ON_XMLDATA_ERROR, function (e) {
                 if (debug)
                     log('err parsing xdata: ' + e.edata);

@@ -9,19 +9,11 @@ var server;
 
 /**
  Configuration
-
-
  media.setSrc('https://www.youtube.com/watch?v=i9MHigUZKEM');
- media.load();
- media.play();
-
+ http://signage.me/components/youtube/hosted/main/youtubeload.html
  http://signage.me/components/youtube/youtube.json
-
  http://www.digitalsignage.com/tmp/youtube2/demo/mediaelementplayer-youtube.html?id=IGQBtbKSVhY
  http://www.digitalsignage.com/tmp/youtube2/demo/mediaelementplayer-youtube.html?id=CzW_5x1M4Uc
-
-
-
  **/
 var configFile = 'youtube.json';
 var appName = 'youtube';

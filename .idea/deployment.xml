@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="digitalsignage.com">
+    <serverData>
+      <paths name="Arduino">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/var/www/sites/signage.me/htdocs/components/youtube" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="digitalsignage.com">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/var/www/sites/signage.me/htdocs/components/youtube" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/var/www/sites/signage.me/htdocs/components/youtube/hosted" local="$PROJECT_DIR$/hosted" web="http://signage.me/components/youtube/hosted/main/youtube.html" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
